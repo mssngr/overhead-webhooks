@@ -5,6 +5,7 @@ module.exports = function (context, cb) {
   const Dropbox = require('dropbox').Dropbox
   new Dropbox({ accessToken })
     .filesListFolder({path: ''})
-    .then(console.log, console.error);
+    .then(response => console.log(response.entries))
+    .catch(console.error)
   cb(null, 'done')
 }
