@@ -1,5 +1,5 @@
 module.exports = function (context, cb) {
-  console.log(context.data.list_folder)
+  console.log(context)
   // require('isomorphic-fetch')
   // const Dropbox = require('dropbox').Dropbox
   // new Dropbox({ accessToken: context.secrets.dropboxAccessToken })
