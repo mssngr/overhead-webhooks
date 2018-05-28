@@ -3,7 +3,7 @@ module.exports = function (context, cb) {
   require('isomorphic-fetch')
   const Dropbox = require('dropbox').Dropbox
   new Dropbox({ accessToken: context.secrets.dropboxAccessToken })
-    .filesListFolder({path: 'Overhead'})
+    .filesListFolder({path: 'Apps/Overhead'})
     .then(console.log, console.error);
   cb(null, 'done')
 }
