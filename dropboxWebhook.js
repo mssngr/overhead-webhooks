@@ -5,5 +5,5 @@ module.exports = function (context, cb) {
   new Dropbox({ accessToken: context.secrets.dropboxAccessToken })
     .filesListFolder({path: 'Apps/Overhead'})
     .then(console.log, console.error);
-  cb(null, 'done')
+  setTimeout(() => cb(null, 'done'), 1000)
 }
